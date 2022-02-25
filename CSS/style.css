@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+p, li{
+    font-family: sans-serif;
+}
+.captalise{
+    text-transform: capitalize;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+}
+header > div{
+    margin: 10px 20px;
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+}
+#navigation-bar{
+    display: none;
+}
+#navigation-bar-icon{
+    font-size: 1.5em;
+}
+.menu li{
+    list-style: none;
+    font-size: 1.4em;
+    padding: 10px 15px;
+}
+input:checked ~ .menu{
+    display: flex;
+}
+input:checked ~ .close-icon{
+    display: block;
+}
+.menu{
+    box-sizing: border-box;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu > .close-icon, 
+.detail-poke-conteiner > .close-icon, 
+.detail-ability-conteiner > .close-icon,
+.detail-moves-conteiner > .close-icon{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-size: 1.5em;
+    color: red;
+}
+.menu > ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60%;
+    justify-content: space-evenly;
+}
+.active{
+    border: 2px solid rgb(2, 190, 81);
+    border-radius: 10px;
+}
+.carrocel{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow-x: scroll;
+}
+.carrocel::-webkit-scrollbar{
+    display: none;
+}
+.carrocel-item, .poke-finded-conteiner {
+    width: 300px;
+    min-width: 280px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.carrocel-item > .poke-stats,
+.poke-finded-conteiner > .poke-stats{
+    display: none;
+}
+.poke-finded-conteiner{
+    margin: 0;
+}
+.carrocel-item > div, 
+.poke-finded-conteiner > div{
+    padding-bottom: 10px;
+}
+.poke-image img{
+    width: 230px;
+    height: 230px;
+}
+.poke-types, 
+.poke-abilities,
+.poke-detail-types,
+.poke-detail-abilities{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.poke-types > div, 
+.poke-abilities > div,
+.poke-detail-types > div,
+.poke-detail-abilities > div{
+    padding: 5px 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+}
+.search-poke{
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+.search-poke > input, 
+.search-poke > button, 
+.poke-detail-moves > button{
+    box-sizing: content-box;
+    height: 35px;
+    width: 200px;
+    border: 2px rgb(2, 190, 81) solid;
+    border-radius: 10px;
+    background-color: rgb(235 255 241);
+    padding: 0 10px;
+    outline: none;
+}
+.search-result{
+    display: flex;
+    justify-content: center;
+}
+.detail-poke-conteiner,
+.detail-ability-conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: aqua;
+    border-radius: 10px;
+}
+.detail-poke-conteiner > div{
+    margin-top: 15px;
+}
+.poke-stats{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px rgb(0, 0, 0) solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+.poke-stats > div{
+    width: 30px;
+    height: 50px;
+    margin-left: 5px;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.poke-stats > div > p{
+    display: block;
+    background: white;
+    padding: 3px;
+    border-radius: 50%;
+}
+.poke-stats > div:first-child > p{
+    display: inline;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+.poke-stats > div::before{
+    position: relative;
+    top: 20px;
+    color: rgb(70, 68, 68);
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.poke-stats > div:first-child, 
+.poke-detail-evolutions > div:first-child{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hp{
+    background-color: #00f91f
+}
+.hp::before {
+    content: "HP";
+}
+.attack{
+    background-color: rgb(228, 22, 22);
+}
+.attack::before {
+    content: "AT";
+}
+.special-attack{
+    background-color: rgb(230, 124, 124);
+}
+.special-attack::before {
+    content: "SA";
+}
+.defense{
+    background-color: rgb(0, 0, 255);
+}
+.defense::before {
+    content: "DE";
+}
+.special-defense{
+    background-color: rgb(121, 121, 219);
+}
+.special-defense::before {
+    content: "SD";
+}
+.speed{
+    background-color: rgb(255, 251, 0);
+}
+.speed::before {
+    content: "SP";
+}
+.poke-detail-moves{
+    margin: 15px auto 0;
+}
+.poke-detail-evolutions > div:last-child{
+    display: flex;
+    flex-direction: row;
+}
+.poke-detail-evolutions > div:last-child > div{
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: rgb(157, 170, 38);
+    margin: 5px;
+}
+
+
+.detail-ability,
+.detail-moves-conteiner{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: aquamarine;
+}
+.detail-ability p,
+.detail-moves-conteiner p{
+    text-align: justify;
+}
+.detail-ability > div,
+.detail-moves-conteiner > div{
+    padding: 10px 20px;
+}
+.detail-ability > div:first-of-type,
+.detail-moves-conteiner > div:first-of-type{
+    margin-top: 30px;
+}
+.detail-ability > div:last-child,
+.detail-moves-conteiner > div:last-child{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: auto;
+}
+.detail-ability > div:last-child::-webkit-scrollbar{
+    display: none;
+}
+.detail-ability > div:last-child > div,
+.detail-moves-conteiner > div:last-child > div{
+    padding: 10px;
+    background: rgb(130, 238, 197);
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+section{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.switch{
+    display: none;
+}
+.switch + div{
+    display: none;
+}
+.switch:checked + div{
+    display: flex;
+}
+
+.grass{
+    border: #37e003 3px solid;
+}
+.fire{
+    border: #f93a00 3px solid;
+}
+.bug{
+    border: #c3f900 3px solid;
+}
+.eletric{
+    border: #ceb420 3px solid;
+}
+.poison{
+    border: #b603a7 3px solid;
+}
+.poison{
+    border: #6b1d65 3px solid;
+}
+.fairy{
+    border: #ff4ba5 3px solid;
+}
+.psychic{
+    border: #d8caca 3px solid;
+}
+.ground,
+.rock{
+    border: #411919 3px solid;
+}
+.water,
+.ice{
+    border: #0095f9 3px solid;
+}
+.normal,
+.flying,
+.fighting,
+.steel{
+    border: #292929 3px solid;
+}
