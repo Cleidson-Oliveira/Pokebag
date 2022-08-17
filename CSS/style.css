@@ -58,7 +58,7 @@ input:checked ~ .close-icon{
 .detail-moves-conteiner > .close-icon{
     position: absolute;
     top: 30px;
-    right: 20px;
+    right: 40px;
     font-size: 1.5em;
     color: red;
 }
@@ -66,8 +66,12 @@ input:checked ~ .close-icon{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 60%;
     justify-content: space-evenly;
+    gap: 2rem;
+}
+.menu a {
+    color: black;
+    text-decoration: none;
 }
 .active{
     border: 2px solid rgb(2, 190, 81);
@@ -78,6 +82,8 @@ input:checked ~ .close-icon{
     flex-direction: row;
     align-items: stretch;
     overflow-x: scroll;
+    column-gap: .5rem;
+    margin-left: 5px;
 }
 .carrocel::-webkit-scrollbar{
     display: none;
@@ -85,7 +91,6 @@ input:checked ~ .close-icon{
 .carrocel-item, .poke-finded-conteiner {
     width: 300px;
     min-width: 280px;
-    margin-left: 5px;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -93,6 +98,7 @@ input:checked ~ .close-icon{
     border-radius: 10px;
     justify-content: flex-start;
     align-items: center;
+    cursor: pointer;
 }
 .carrocel-item > .poke-stats,
 .poke-finded-conteiner > .poke-stats{
@@ -125,6 +131,9 @@ input:checked ~ .close-icon{
     border: 1px solid black;
     border-radius: 10px;
     margin: 5px;
+}
+.viewMorePoke{
+    display: none;
 }
 .search-poke{
     height: 110px;
@@ -263,8 +272,6 @@ input:checked ~ .close-icon{
     background: rgb(157, 170, 38);
     margin: 5px;
 }
-
-
 .detail-ability,
 .detail-moves-conteiner{
     display: flex;
@@ -323,41 +330,53 @@ section{
     display: flex;
 }
 
-.grass{
-    border: #37e003 3px solid;
+@media screen and (min-width: 500px) {
+    .carrocel {
+        overflow-x: auto;
+        flex-wrap: wrap;
+        gap: .5rem;
+        justify-content: center;
+    }
+    .viewMorePoke {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    .viewMorePoke button {
+        background-color: #607d8b;
+        color: white;
+        padding: 1rem 1.3rem;
+        box-sizing: content-box;
+        border: none;
+        cursor: pointer;
+        border-radius: .3rem;
+    }
+    .viewMorePoke button:hover {
+        background-color: rgb(188, 221, 203);
+        color: #395563;
+        padding: 1rem 1.3rem;
+        box-sizing: content-box;
+        border: none;
+    }
+    .menu {
+        display: flex;
+        position: relative;
+        background: none;
+        width: auto;
+        height: auto;
+    }
+    .menu > ul {
+        flex-direction: row;
+    }
+    #navigation-bar-icon, .menu .close-icon {
+        display: none;
+    }
 }
-.fire{
-    border: #f93a00 3px solid;
-}
-.bug{
-    border: #c3f900 3px solid;
-}
-.eletric{
-    border: #ceb420 3px solid;
-}
-.poison{
-    border: #b603a7 3px solid;
-}
-.poison{
-    border: #6b1d65 3px solid;
-}
-.fairy{
-    border: #ff4ba5 3px solid;
-}
-.psychic{
-    border: #d8caca 3px solid;
-}
-.ground,
-.rock{
-    border: #411919 3px solid;
-}
-.water,
-.ice{
-    border: #0095f9 3px solid;
-}
-.normal,
-.flying,
-.fighting,
-.steel{
-    border: #292929 3px solid;
+@media screen and (max-width: 700px) {
+    .menu ul li{
+        font-size: 1rem;
+    }
 }

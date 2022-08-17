@@ -7,11 +7,10 @@
     <title>Pokebag</title>
     <script src="https://kit.fontawesome.com/b902d46ecc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/styleByPokeType.css">
 </head>
 <body>
-
     <main>
-
         <header>
             <div class="logo"><img src="./Images/logo.png" alt="Logotipo - Pokebag"></div>
             <div class="menu-conteiner">
@@ -20,16 +19,27 @@
                 <div class="menu">
                     <label for="navigation-bar" class="close-icon"><i class="fas fa-times"></i></label>
                     <ul>
-                        <li class="active">Pokedex</li>
-                        <li>Equipes</li>
-                        <li>Simulação</li>
-                        <li>Torneios</li>
+                        <li class="active">
+                            <a href="#">Pokedex</a>
+                        </li>
+                        <li>
+                            <a href="#">Equipes</a>
+                        </li>
+                        <li>
+                            <a href="#">Simulação</a>
+                        </li>
+                        <li>
+                            <a href="#">Torneios</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </header>
 
         <div class="carrocel" id="carrocel" onscroll="carrocelScroll()"></div>
+        <div class="viewMorePoke">
+            <button onclick="montarCarrocel()">Carregar mais</button>
+        </div>
 
         <div class="search-poke">
             <p>Pesquise pelo Id ou nome do pokémon</p>
