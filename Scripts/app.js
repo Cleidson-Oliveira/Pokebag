@@ -1,7 +1,5 @@
 let url = nextUrl = "https://pokeapi.co/api/v2/pokemon";
 
-let qual = "";
-
 const acessarApi = async url => {
     let require = await fetch(url);
     require = await require.json();
@@ -172,7 +170,7 @@ const carrocelScroll = () => {
     }
 }
 
-const clear = element => {
+const clear = ( element ) => {
     while (element.firstChild) {
         element.removeChild(element.firstChild)
     }
