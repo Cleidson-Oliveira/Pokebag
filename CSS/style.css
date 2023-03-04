@@ -75,6 +75,8 @@
     border-radius: 4px;
     transition: transform 200ms linear;
     cursor: pointer;
+    text-decoration: none;
+    color : var(--black);
 }
 
 .card img {

@@ -32,7 +32,7 @@ const showPokeCards = async () => {
         const types = pokemon.types.map(({type}) => type.name);
 
         const pokeCardView = `
-            <div class="card ${types[0]}">
+            <a href="/pages/pokemon/?id=${pokemon.id}" class="card ${types[0]}" >
                 <header class="card-header">
                     <img src="${pokemon.sprites.other.home.front_default}" alt="">
                     <p class="poke-name">${pokemon.id} - ${pokemon.name}</p>
@@ -42,7 +42,7 @@ const showPokeCards = async () => {
                         return acc + `<p>${cur}</p>`
                     }, "")}
                 </div>
-            </div>
+            </a>
         `;
         pokesContainer.innerHTML += pokeCardView;
     })
@@ -52,7 +52,7 @@ const showPokeCards = async () => {
 
 
 const addEventToShowMorePokemons = () => {
-    lastCard = document.querySelector("#pokes-container > div:last-child");
+    lastCard = document.querySelector("#pokes-container > a:last-child");
     
     if ( intersectionScrollInfinite != undefined ) {
         intersectionScrollInfinite.disconnect();
