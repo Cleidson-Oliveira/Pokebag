@@ -32,7 +32,7 @@ const showPokeCards = async () => {
         const types = pokemon.types.map(({type}) => type.name);
 
         const pokeCardView = `
-            <a href="/pages/pokemon/?id=${pokemon.id}" class="card ${types[0]}" >
+            <a href="pages/pokemon/?id=${pokemon.id}" class="card ${types[0]}" >
                 <header class="card-header">
                     <img src="${pokemon.sprites.other.home.front_default}" alt="">
                     <p class="poke-name">${pokemon.id} - ${pokemon.name}</p>
