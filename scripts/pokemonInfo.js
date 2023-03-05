@@ -21,16 +21,20 @@ const setView = () => {
     .then(pokeInfo => {
         console.log(pokeInfo)
         const view = `
-            <div>
+            <div class="pokeImageAndName">
                 <img src="${pokeInfo.sprites.other.home.front_default}" class="poke-image">
-                <p>${pokeInfo.name}</p>
+                <p>${pokeInfo.id} - ${pokeInfo.name}</p>
             </div>
             <div class="stats" >
                 ${pokeInfo.stats.reduce((acc, cur) => {
                     const stat = `
-                        <div class="stat"  >
+                        <div class="stat" >
                             ${cur.stat.name}
-                            <div style="width: ${cur.base_stat}px"></div>
+                            <div
+                                class="${cur.stat.name}"
+                                style="width: ${cur.base_stat*3}px"
+                                data-stat="${cur.base_stat}"
+                            ></div>
                         </div>`
                     return acc + stat;
                 }, "")}

@@ -8,6 +8,13 @@
     align-items: center;
 }
 
+.pokeImageAndName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
 .poke-image {
     width: 300px;
 }
@@ -18,7 +25,40 @@
     gap: 1rem;
 }
 
+.stat {
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
 .stat > div {
-    background-color: red;
     height: 2px;
+    position: relative;
+}
+
+.stat > div::before {
+    content: attr(data-stat);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: .8rem;
+}
+
+.hp {
+    background-color: green;
+}
+.attack {
+    background-color: red;
+}
+.defense {
+    background-color: blue;
+}
+.special-attack {
+    background-color: red;
+}
+.special-defense {
+    background-color: blue;
+}
+.speed {
+    background-color: black;
 }
