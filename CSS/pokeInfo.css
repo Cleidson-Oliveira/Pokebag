@@ -121,6 +121,8 @@
     gap: .5rem;
     width: 100%;
     padding: 1rem;
+    box-sizing: border-box;
+
 }
 
 .addPokeToTeam>select, .addPokeToTeam>button {

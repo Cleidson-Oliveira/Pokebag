@@ -10,6 +10,10 @@
     font-family: monospace, sans-serif;
 }
 
+button {
+    cursor: pointer;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
