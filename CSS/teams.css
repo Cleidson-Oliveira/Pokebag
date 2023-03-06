@@ -1,0 +1,40 @@
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+.team > h2{
+    width: 100%;
+}
+
+.createNewTeam {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.createNewTeam>input, .createNewTeam>button {
+    padding: .5rem .8rem;
+}
+
+.card-team {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+    border: 1px solid green;
+    justify-content: space-between;
+    border-radius: 4px;
+    transition: transform 200ms linear;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+}
+
+.card-team img {
+    width: 80px;
+}

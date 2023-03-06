@@ -112,3 +112,9 @@
     border-radius: 4px;
     padding: .3rem .5rem;
 }
+
+.addPokeToTeam {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

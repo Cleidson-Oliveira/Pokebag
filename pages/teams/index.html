@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../CSS/style.css">
-    <title>Equipes</title>
+    <link rel="stylesheet" href="../../CSS/teams.css">
+    <title>Teams</title>
 </head>
 <body>
     <header class="header">
@@ -15,10 +16,17 @@
                 <a href="./../../">Pokedex</a>
             </li>
             <li class="active">
-                <a href="#">Equipes</a>
+                <a href="#">Teams</a>
             </li>
         </ul>
     </header>
+    <main id="container">
+        <div class="createNewTeam">
+            <input type="text" id="newTeam">
+            <button onclick="createNewTeam()">New team</button>
+        </div>
+    </main>
     
+    <script src="../../scripts/teams.js"></script>
 </body>
 </html>
