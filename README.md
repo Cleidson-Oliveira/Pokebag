@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="Images/Logo.png" width="100px">
+    <img src="Images/logo.png" width="100px">
 </h1>
 
 # Indice
