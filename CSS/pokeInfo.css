@@ -4,7 +4,7 @@
     background-position: right;
 }
 
-.container>div{
+.pokeInfoContainer {
     display: flex;
     gap: 3rem;
     width: 80%;
@@ -116,5 +116,15 @@
 .addPokeToTeam {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
     width: 100%;
+    padding: 1rem;
+}
+
+.addPokeToTeam>select, .addPokeToTeam>button {
+    width: 200px;
+    padding: .5rem .7rem;
+    box-sizing: border-box;
 }

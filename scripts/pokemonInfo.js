@@ -47,7 +47,7 @@ const setView = () => {
     getPokeInfo()
     .then(pokeInfo => {
         const view = `
-            <div class="${pokeInfo.types[0].type.name}">
+            <div class="pokeInfoContainer ${pokeInfo.types[0].type.name}">
                 <div class="pokeInfo">
                     <div>
                         <h1 class="pokeName">${pokeInfo.name}<span>#${pokeInfo.id}</span></h1>
@@ -92,7 +92,6 @@ const setView = () => {
                     <img src="${pokeInfo.sprites.other.home.front_default}" class="pokeImage">
                 </div>
             </div>
-
             <div class="addPokeToTeam">
                 <select id="teamId">
                     ${teams.reduce((acc, cur) => {
@@ -100,7 +99,7 @@ const setView = () => {
                         return acc + el
                     }, "")}
                 </select>
-                <button onclick="addPokemonToTeam()">Add pokemon to team<button>
+                <button onclick="addPokemonToTeam()">Add pokemon to team</button>
             </div>
         `;
         container.innerHTML = view
