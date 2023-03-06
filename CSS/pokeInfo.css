@@ -1,5 +1,5 @@
 .container {
-    background-image: url("/Images/pokeball.svg");
+    background-image: url("../Images/pokeball.svg");
     background-repeat: no-repeat;
     background-position: right;
 }
