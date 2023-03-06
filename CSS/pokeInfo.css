@@ -1,28 +1,60 @@
 .container {
+    background-image: url("/Images/pokeball.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.container>div{
     display: flex;
     gap: 3rem;
     width: 80%;
-    margin: auto;
+    margin: 1rem auto 0;
     padding: 2rem;
+    border-radius: 8px;
     justify-content: space-evenly;
     align-items: center;
+    border: none;
 }
 
-.pokeImageAndName {
+.pokeInfo {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 2rem;
+    min-width: 300px;
+}
+
+.pokeName {
+    text-transform: capitalize;
+    color: #98a6b5;
+}
+
+.pokeName>span {
+    font-size: 1rem;
+}
+
+.pokeTypes {
+    display: flex;
+    gap: 1rem;
+}
+.pokeTypes>p {
+    background: #ccc;
+    padding: .2rem .3rem;
+    border-radius: 4px;
+    font-size: .8rem;
+}
+
+.pokeImage {
+    width: 400px;
+}
+
+.pokeStats {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
 
-.poke-image {
-    width: 300px;
-}
-
-.stats {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.pokeStats>h2 {
+    font-size: 1.2rem;
 }
 
 .stat {
@@ -61,4 +93,22 @@
 }
 .speed {
     background-color: black;
+}
+
+.pokeAbility {
+    display: flex;
+    gap: .6rem;
+    flex-direction: column;
+    text-transform: capitalize;
+}
+
+.pokeAbility>h2 {
+    font-size: 1rem;
+}
+
+.pokeAbility > div {
+    width: 100px;
+    background-color: #bbb;
+    border-radius: 4px;
+    padding: .3rem .5rem;
 }
